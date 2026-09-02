@@ -32,7 +32,7 @@
   font-size: 26rpx;
 }
 
-.section { margin-bottom: 16rpx; }
+.section { width: auto; margin-bottom: 16rpx; }
 
 .tags { display: flex; flex-wrap: wrap; }
 
