@@ -1,0 +1,121 @@
+.page { padding: 24rpx; padding-bottom: 180rpx; }
+
+.search-bar input {
+  background: #fff;
+  border-radius: 18rpx;
+  padding: 20rpx 28rpx;
+  font-size: 28rpx;
+  border: 1rpx solid #ece5d8;
+}
+
+.cats {
+  margin-top: 20rpx;
+  white-space: nowrap;
+  display: flex;
+}
+
+.chip {
+  display: inline-block;
+  font-size: 26rpx;
+  color: #8c8378;
+  background: #fff;
+  border-radius: 28rpx;
+  padding: 10rpx 28rpx;
+  margin-right: 16rpx;
+  border: 1rpx solid #e9e2d6;
+}
+
+.chip.on {
+  color: #fff;
+  background: #a68b6f;
+  border-color: #a68b6f;
+}
+
+.empty {
+  margin-top: 200rpx;
+  text-align: center;
+  color: #b3a99c;
+  font-size: 28rpx;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.list { margin-top: 24rpx; }
+
+.card {
+  background: #fff;
+  border-radius: 22rpx;
+  padding: 26rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2rpx 10rpx rgba(90, 75, 60, 0.05);
+}
+
+.thumb {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 14rpx;
+  margin-right: 24rpx;
+  flex-shrink: 0;
+  background: #f1ece4;
+}
+
+.info { flex: 1; min-width: 0; }
+
+.name-row { display: flex; align-items: center; }
+
+.name { font-size: 32rpx; font-weight: 600; letter-spacing: 1rpx; }
+
+.status {
+  margin-left: 14rpx;
+  font-size: 22rpx;
+  color: #9a8f80;
+  background: #f1ece4;
+  border-radius: 8rpx;
+  padding: 2rpx 12rpx;
+}
+
+.meta {
+  margin-top: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cat {
+  font-size: 22rpx;
+  color: #8c6f52;
+  background: #ece2d2;
+  border-radius: 8rpx;
+  padding: 2rpx 12rpx;
+  margin-right: 16rpx;
+}
+
+.date { font-size: 24rpx; color: #a89e91; }
+
+.tag {
+  font-size: 22rpx;
+  color: #8c7a63;
+  background: #f4efe7;
+  border-radius: 8rpx;
+  padding: 2rpx 12rpx;
+  margin-right: 10rpx;
+  margin-top: 4rpx;
+}
+
+.fab {
+  position: fixed;
+  right: 40rpx;
+  bottom: 80rpx;
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  background: #a68b6f;
+  color: #fff;
+  font-size: 56rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba(166, 139, 111, 0.35);
+}

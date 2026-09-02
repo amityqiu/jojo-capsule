@@ -1,0 +1,37 @@
+<view class="page">
+  <view class="search-bar">
+    <input placeholder="搜一搜，看看买没买过" value="{{keyword}}" bindinput="onSearch" confirm-type="search" />
+  </view>
+
+  <scroll-view scroll-x class="cats" enable-flex>
+    <text class="chip {{activeCat === c ? 'on' : ''}}"
+          wx:for="{{cats}}" wx:for-item="c" wx:key="*this"
+          bindtap="onCat" data-c="{{c}}">{{c}}</text>
+  </scroll-view>
+
+  <view wx:if="{{filtered.length === 0}}" class="empty">
+    <text>{{items.length === 0 ? '还没有记录\n点右下角 + 记下第一件物品吧' : '没找到，看来还没买过～'}}</text>
+  </view>
+
+  <view class="list">
+    <view class="card" wx:for="{{filtered}}" wx:key="_id"
+          bindtap="goDetail" data-id="{{item._id}}">
+      <image wx:if="{{item.photo}}" class="thumb" src="{{item.photo}}" mode="aspectFill" />
+      <view class="info">
+        <view class="name-row">
+          <text class="name">{{item.name}}</text>
+          <text class="status" wx:if="{{item.status && item.status !== '在用'}}">{{item.status}}</text>
+        </view>
+        <view class="meta">
+          <text class="cat" wx:if="{{item.category}}">{{item.category}}</text>
+          <text class="date">{{item.date}} · 陪伴{{item.days}}天</text>
+        </view>
+        <view class="meta" wx:if="{{item.tags && item.tags.length}}">
+          <text class="tag" wx:for="{{item.tags}}" wx:for-item="t" wx:key="*this">{{t}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="fab" bindtap="goAdd">＋</view>
+</view>

@@ -1,0 +1,66 @@
+.page { padding: 32rpx; padding-bottom: 60rpx; }
+
+.photo-box { display: flex; justify-content: center; margin-bottom: 32rpx; }
+
+.photo,
+.photo-placeholder { width: 240rpx; height: 240rpx; border-radius: 22rpx; }
+
+.photo-placeholder {
+  background: #fff;
+  border: 2rpx dashed #d8cfc0;
+  color: #b3a99c;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field {
+  background: #fff;
+  border-radius: 18rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.label { font-size: 24rpx; color: #a89e91; margin-bottom: 12rpx; }
+
+.field input,
+.picker { font-size: 30rpx; }
+
+.chips { display: flex; flex-wrap: wrap; }
+
+.chip {
+  font-size: 26rpx;
+  color: #8c8378;
+  background: #f7f4ef;
+  border-radius: 26rpx;
+  padding: 10rpx 26rpx;
+  margin: 8rpx 14rpx 4rpx 0;
+  border: 1rpx solid #e9e2d6;
+}
+
+.chip.on {
+  color: #fff;
+  background: #a68b6f;
+  border-color: #a68b6f;
+}
+
+.add-chip { color: #a68b6f; border-style: dashed; background: #fff; }
+
+.gift.on { background: #c98d6b; border-color: #c98d6b; }
+
+.giver {
+  margin-top: 16rpx;
+  background: #f7f4ef;
+  border-radius: 12rpx;
+  padding: 16rpx 20rpx;
+}
+
+.save {
+  margin-top: 40rpx;
+  background: #a68b6f;
+  color: #fff;
+  border-radius: 44rpx;
+  font-size: 32rpx;
+  letter-spacing: 2rpx;
+}

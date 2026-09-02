@@ -1,0 +1,57 @@
+<view class="page">
+  <view class="photo-box" bindtap="choosePhoto">
+    <image wx:if="{{photoTemp}}" src="{{photoTemp}}" mode="aspectFill" class="photo" />
+    <view wx:else class="photo-placeholder">📷 拍张照（可选）</view>
+  </view>
+
+  <view class="field">
+    <view class="label">名称 *</view>
+    <input placeholder="比如：白色帆布包" value="{{name}}" bindinput="onName" />
+  </view>
+
+  <view class="field">
+    <view class="label">分类（点一下选中，再点取消）</view>
+    <view class="chips">
+      <text class="chip {{category === c ? 'on' : ''}}"
+            wx:for="{{cats}}" wx:for-item="c" wx:key="*this"
+            bindtap="pickCat" data-c="{{c}}">{{c}}</text>
+      <text class="chip add-chip" bindtap="addCat">＋ 自定义</text>
+    </view>
+  </view>
+
+  <view class="field">
+    <view class="label">价格（可选，填了帮你算每天成本）</view>
+    <input type="digit" placeholder="比如：129" value="{{priceText}}" bindinput="onPrice" />
+  </view>
+
+  <view class="field">
+    <view class="label">来源（可选）</view>
+    <view class="chips">
+      <text class="chip {{source === s ? 'on' : ''}}"
+            wx:for="{{sources}}" wx:for-item="s" wx:key="*this"
+            bindtap="pickSource" data-s="{{s}}">{{s}}</text>
+      <text class="chip gift {{isGift ? 'on' : ''}}" bindtap="pickGift">🎁 别人送的</text>
+    </view>
+    <input wx:if="{{isGift}}" class="giver" placeholder="谁送的呀？"
+           value="{{giver}}" bindinput="onGiver" />
+  </view>
+
+  <view class="field">
+    <view class="label">物品生日（入手日期）</view>
+    <picker mode="date" value="{{date}}" bindchange="onDate">
+      <view class="picker">{{date}}</view>
+    </picker>
+  </view>
+
+  <view class="field">
+    <view class="label">标签（用空格分开，可选）</view>
+    <input placeholder="比如：出门必备 回杭州带走" value="{{tagsText}}" bindinput="onTags" />
+  </view>
+
+  <view class="field">
+    <view class="label">备注（可选）</view>
+    <input placeholder="为什么买、有什么故事…" value="{{note}}" bindinput="onNote" />
+  </view>
+
+  <button class="save" bindtap="save" loading="{{saving}}" disabled="{{saving}}">存好啦</button>
+</view>

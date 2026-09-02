@@ -1,0 +1,43 @@
+<view class="page" wx:if="{{item}}">
+  <image wx:if="{{item.photo}}" class="photo" src="{{item.photo}}" mode="aspectFill" />
+
+  <view class="card">
+    <view class="name">{{item.name}}</view>
+    <view class="row" wx:if="{{item.category}}">
+      <text class="k">分类</text><text>{{item.category}}</text>
+    </view>
+    <view class="row">
+      <text class="k">生日</text><text>{{item.date}}（已陪伴 {{days}} 天）</text>
+    </view>
+    <view class="row" wx:if="{{perDay}}">
+      <text class="k">价格</text><text>¥{{item.price}} · 每天约 {{perDay}}</text>
+    </view>
+    <view class="row" wx:if="{{sourceText}}">
+      <text class="k">来源</text><text>{{sourceText}}</text>
+    </view>
+    <view class="row" wx:if="{{item.tags && item.tags.length}}">
+      <text class="k">标签</text>
+      <view class="tags">
+        <text class="tag" wx:for="{{item.tags}}" wx:for-item="t" wx:key="*this">{{t}}</text>
+      </view>
+    </view>
+    <view class="row" wx:if="{{item.note}}">
+      <text class="k">备注</text><text>{{item.note}}</text>
+    </view>
+    <view class="row" wx:if="{{item.rebuy}}">
+      <text class="k">还买吗</text><text>{{item.rebuy}}</text>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="k section">现在的状态</view>
+    <view class="chips">
+      <text class="chip {{item.status === s ? 'on' : ''}}"
+            wx:for="{{statuses}}" wx:for-item="s" wx:key="*this"
+            bindtap="setStatus" data-s="{{s}}">{{s}}</text>
+    </view>
+  </view>
+
+  <button class="edit" bindtap="goEdit">✏️ 编辑</button>
+  <view class="del" bindtap="onDelete">删除这件物品</view>
+</view>

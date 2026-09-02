@@ -1,0 +1,80 @@
+.page { padding: 32rpx; padding-bottom: 60rpx; }
+
+.photo {
+  width: 100%;
+  height: 420rpx;
+  border-radius: 22rpx;
+  margin-bottom: 24rpx;
+  background: #f1ece4;
+}
+
+.card {
+  background: #fff;
+  border-radius: 22rpx;
+  padding: 28rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 2rpx 10rpx rgba(90, 75, 60, 0.05);
+}
+
+.name { font-size: 38rpx; font-weight: 700; margin-bottom: 20rpx; letter-spacing: 1rpx; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  font-size: 28rpx;
+  margin-bottom: 16rpx;
+}
+
+.k {
+  width: 120rpx;
+  flex-shrink: 0;
+  color: #a89e91;
+  font-size: 26rpx;
+}
+
+.section { margin-bottom: 16rpx; }
+
+.tags { display: flex; flex-wrap: wrap; }
+
+.tag {
+  font-size: 22rpx;
+  color: #8c7a63;
+  background: #f4efe7;
+  border-radius: 8rpx;
+  padding: 2rpx 12rpx;
+  margin-right: 10rpx;
+  margin-bottom: 6rpx;
+}
+
+.chips { display: flex; flex-wrap: wrap; }
+
+.chip {
+  font-size: 26rpx;
+  color: #8c8378;
+  background: #f7f4ef;
+  border-radius: 26rpx;
+  padding: 10rpx 26rpx;
+  margin: 8rpx 14rpx 4rpx 0;
+  border: 1rpx solid #e9e2d6;
+}
+
+.chip.on {
+  color: #fff;
+  background: #a68b6f;
+  border-color: #a68b6f;
+}
+
+.edit {
+  background: #a68b6f;
+  color: #fff;
+  border-radius: 44rpx;
+  font-size: 32rpx;
+  letter-spacing: 2rpx;
+}
+
+.del {
+  margin-top: 32rpx;
+  text-align: center;
+  color: #c96a5e;
+  font-size: 28rpx;
+}
